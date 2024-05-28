@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Создать Карточку</title>
+</head>
+<body>
+    <h1>Создайте Вашу Карточку</h1>
+    <p>{{ get_flashed_messages()[0] }}</p>
+    <form method="post" enctype="multipart/form-data">
+        Имя пользователя: <input type="text" name="username" required><br>
+        Пароль: <input type="password" name="password" required><br>
+        Возраст: <input type="number" name="age" required><br>
+        Текст 1: <textarea name="text_1" maxlength="150" required></textarea><br>
+        Текст 2: <textarea name="text_2" maxlength="130" required></textarea><br>
+        Текст 3: <textarea name="text_3" maxlength="130" required></textarea><br>
+        Изображение 1: <input type="file" name="image_1" accept="image/jpeg"><br>
+        Изображение 2: <input type="file" name="image_2" accept="image/jpeg"><br>
+        Изображение 3: <input type="file" name="image_3" accept="image/jpeg"><br>
+        Ссылка 1: <input type="url" name="link_1"><br>
+        Ссылка 2: <input type="url" name="link_2"><br>
+        Ссылка 3: <input type="url" name="link_3"><br>
+        Ссылка 4: <input type="url" name="link_4"><br>
+        <button type="submit">Создать</button>
+    </form>
+    <a href="{{ url_for('index') }}">Вернуться на главную</a>
+</body>
+</html>

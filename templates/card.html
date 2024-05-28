@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка {{ card.username }}</title>
+</head>
+<body>
+    <h1>Карточка {{ card.username }}</h1>
+    <p>Возраст: {{ card.age }}</p>
+    <p>Текст 1: {{ card.text_1 }}</p>
+    <p>Текст 2: {{ card.text_2 }}</p>
+    <p>Текст 3: {{ card.text_3 }}</p>
+    {% if card.image_1 %}
+        <img src="data:image/jpeg;base64,{{ card.image_1 }}" alt="Изображение 1"><br>
+    {% endif %}
+    {% if card.image_2 %}
+        <img src="data:image/jpeg;base64,{{ card.image_2 }}" alt="Изображение 2"><br>
+    {% endif %}
+    {% if card.image_3 %}
+        <img src="data:image/jpeg;base64,{{ card.image_3 }}" alt="Изображение 3"><br>
+    {% endif %}
+    <p>Ссылка 1: <a href="{{ card.link_1 }}">{{ card.link_1 }}</a></p>
+    <p>Ссылка 2: <a href="{{ card.link_2 }}">{{ card.link_2 }}</a></p>
+    <p>Ссылка 3: <a href="{{ card.link_3 }}">{{ card.link_3 }}</a></p>
+    <p>Ссылка 4: <a href="{{ card.link_4 }}">{{ card.link_4 }}</a></p>
+    <a href="{{ url_for('index') }}">Вернуться на главную</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Карточка {{ card.username }}</title>
+</head>
+<body class="telo">
+    <header class="header_name_conteiner">
+        <nav>
+            <a href="{{ url_for('create') }}">Создать свою Карточку</a>
+            <a href="{{ url_for('delete') }}">Удалить свою Карточку</a>
+            <a href="{{ url_for('index') }}">Вернуться на главную</a>
+        </nav>
+    </header>
+<div class="blue_fone">
+    <div class="menu">
+        <button class="menu_elements" onclick="window.open('{{ card.link_1 }}');" target="_self"> GitHub </button>
+        <button class="menu_elements" onclick="window.open('{{ card.link_2 }}');" target="_self"> VK </button>
+        <button class="menu_elements" onclick="window.open('{{ card.link_3 }}');" target="_self"> Telegram </button>
+        <button class="menu_elements" onclick="window.open('{{ card.link_4 }}');" target="_self"> CSS </button>
+        </form>
+    </div>
+    <main>
+        <h1>Карточка {{ card.username }}</h1>
+        <h2>Мой возраст: {{card.age }}</h2>
+        <div class="main_info">
+            <div class="linia_info"></div>
+            <div class="first_slaid">
+                <div class="oval"></div>
+                <p class="dop_info">  </p>
+            </div>
+            <div class="second_slaid_main">
+                <p class="second_slaid_main_text"> {{ card.text_1 }} </p>
+            </div>
+            <!-- <img class="main_photo" src="main_photo.jpg" alt="Здесь должна быть картника"> -->
+            {% if card.image_1 %}
+                <img class="main_photo" src="data:image/jpeg;base64,{{ card.image_1 }}" alt="Изображение 1"><br>
+            {% endif %}
+            <div class="ramka">
+            </div>
+        </div>
+        <div class="blue_block1">
+            <p class="blue_text1"> {{ card.text_2 }} </p>
+        </div>
+
+        <div class="blue_block2">
+            <p class="blue_text2"> {{ card.text_3 }} </p>
+        </div>
+        <hr class="linia"></hr>      
+        <div class="sec_block_ram_photo">
+            <!-- <img class="sec_photo" src="photo2.png"alt="Здесь должна быть картника"> -->
+            {% if card.image_2 %}
+                <img class="sec_photo" src="data:image/jpeg;base64,{{ card.image_2 }}" alt="Изображение 2"><br>
+            {% endif %}
+            <div class="sec_ramka">
+            </div>
+        </div>
+        
+        <div class="third_ramka">
+            {% if card.image_3 %}
+                <img class="third_photo" src="data:image/jpeg;base64,{{ card.image_3 }}" alt="Изображение 3"><br>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+    </main>
+</div>
+</body>
+</html>

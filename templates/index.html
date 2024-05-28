@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Главная</title>
+</head>
+<body>
+    <h1>Добро пожаловать в Генератор Карточек</h1>
+    <a href="{{ url_for('create') }}"><button>Создать Карточку</button></a>
+    <a href="{{ url_for('delete') }}"><button>Удалить Карточку</button></a>
+    <hr>
+    <h2>Поиск Карточки</h2>
+    <form method="post">
+        Имя пользователя: <input type="text" name="search_username" required>
+        <button type="submit">Найти</button>
+    </form>
+</body>
+</html>
