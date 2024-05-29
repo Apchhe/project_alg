@@ -5,25 +5,82 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Создать Карточку</title>
 </head>
-<body>
-    <h1>Создайте Вашу Карточку</h1>
-    <p>{{ get_flashed_messages()[0] }}</p>
-    <form method="post" enctype="multipart/form-data">
-        Имя пользователя: <input type="text" name="username" required><br>
-        Пароль: <input type="password" name="password" required><br>
-        Возраст: <input type="number" name="age" required><br>
-        Текст 1: <textarea name="text_1" maxlength="150" required></textarea><br>
-        Текст 2: <textarea name="text_2" maxlength="130" required></textarea><br>
-        Текст 3: <textarea name="text_3" maxlength="130" required></textarea><br>
-        Изображение 1: <input type="file" name="image_1" accept="image/jpeg"><br>
-        Изображение 2: <input type="file" name="image_2" accept="image/jpeg"><br>
-        Изображение 3: <input type="file" name="image_3" accept="image/jpeg"><br>
-        Ссылка 1: <input type="url" name="link_1"><br>
-        Ссылка 2: <input type="url" name="link_2"><br>
-        Ссылка 3: <input type="url" name="link_3"><br>
-        Ссылка 4: <input type="url" name="link_4"><br>
-        <button type="submit">Создать</button>
-    </form>
-    <a href="{{ url_for('index') }}">Вернуться на главную</a>
+<body class="telo">
+
+    <h1 class="header_name_conteiner">Создайте Вашу Карточку</h1>
+    
+    <div class="blue_fone_create">
+
+        <p>{{ get_flashed_messages()[0] }}</p>
+
+        <form method="post" enctype="multipart/form-data">
+
+            <div class="fb_create">
+                
+                <div class="aligning">
+                    <span class="username_create"> Имя пользователя: </span><input type="text" name="username" required maxlength="25"><br>
+                </div>
+
+                <div class="aligning">
+                    <span class="password_create"> Пароль: </span><input type="password" name="password" required maxlength="6"><br>
+                </div>
+
+                <div class="aligning">
+                    <span class="age_create"> Возраст: </span><input type="number" name="age" required min="0" max="100"><br>
+                </div>
+                
+            </div>
+
+            <div class="linia_index1"></div>
+
+            <div class="text_create">
+
+                <textarea  name="text_1" maxlength="150" placeholder="Введите информацию о себе..." required></textarea><br>
+                <textarea name="text_2" maxlength="130" placeholder="Введите информацию о себе..." required></textarea><br>
+                <textarea name="text_3" maxlength="130" placeholder="Введите информацию о себе..." required></textarea><br>
+                
+            </div>
+        
+            <div class="linia_index1"></div>
+
+            <div>
+                
+                <div class="aligning">
+                    <span class="img_create"> Изображение 1: </span><input type="file" name="image_1" accept="image/jpeg"><br>
+                </div> 
+ 
+                <div class="aligning"> 
+                    <span class="img_create"> Изображение 2: </span><input type="file" name="image_2" accept="image/jpeg"><br>
+                </div> 
+         
+                <div class="aligning"> 
+                    <span class="img_create"> Изображение 3: </span><input type="file" name="image_3" accept="image/jpeg"><br>
+                </div>
+
+            </div>
+
+            <div class="linia_index1"></div>
+
+            <div class="link_create">
+                
+                <div class="first_col_link_create">
+                    <span class="link_alone"> Ссылка 1: </span><input type="url" name="link_1"><br>        
+                    <span class="link_alone"> Ссылка 2: </span><input type="url" name="link_2"><br>
+                </div>
+
+                <div class="sec_col_link_create">
+                    <span class="link_alone"> Ссылка 3: </span><input type="url" name="link_3"><br>
+                    <span class="link_alone"> Ссылка 4: </span><input type="url" name="link_4"><br>
+                </div>
+            </div>
+
+            <div class="linia_index1"></div>
+
+            <button class="submit_create" type="submit">Создать</button>
+
+        </form>
+        <a class="link_back" href="{{ url_for('index') }}"><button class="back_create"> Вернуться на главную </a></button>
+
+    </div>
 </body>
 </html>
