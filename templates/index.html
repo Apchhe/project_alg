@@ -5,15 +5,29 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Главная</title>
 </head>
-<body>
-    <h1>Добро пожаловать в Генератор Карточек</h1>
-    <a href="{{ url_for('create') }}"><button>Создать Карточку</button></a>
-    <a href="{{ url_for('delete') }}"><button>Удалить Карточку</button></a>
-    <hr>
-    <h2>Поиск Карточки</h2>
-    <form method="post">
-        Имя пользователя: <input type="text" name="search_username" required>
-        <button type="submit">Найти</button>
-    </form>
+<body class="telo">
+        
+    <h1 class="header_name_conteiner"> Добро пожаловать в Генератор Карточек </h1>
+    
+    <div class="blue_fone_index">
+        <div class="menu_index">
+            <a href="{{ url_for('create') }}"><button class="menu_elements_index">Создать Карточку</button></a>
+            <a href="{{ url_for('delete') }}"><button class="menu_elements_index">Удалить Карточку</button></a>
+        </div>
+
+        <div class="linia_index1"></div>
+
+        <div class="poisk_index">
+            
+            <h2 class="b_poisk">Поиск Карточки</h2>
+            <form method="post"> <span class="username_index">Имя пользователя: </span>
+                <input type="text" name="search_username" maxlength="30" required>
+                <button class="submit_index" type="submit"> Найти </button>
+            </form>
+
+            <div class="linia_index1"></div>
+        </div>
+    </div>
 </body>
 </html>
+
