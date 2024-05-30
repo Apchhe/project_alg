@@ -9,7 +9,7 @@
 .blue_fone{
     background-color: #021C28;
     width: 1440px;
-    height: 1600px;
+    height: 1650px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 35px;
@@ -29,6 +29,53 @@
     margin: auto;
     margin-top: 10px;
     line-height: 50px;
+}
+
+.header_elements_card{
+    width: 300px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 100px;
+    border-radius: 50px;
+    border-style: solid;
+    background-color: #6CC8AC;
+    font-size: 23px; 
+}
+
+.header_elements_card:active{
+    border: #6CC8AC;
+}
+
+.na_card{
+    width: 800px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.name_card{
+    width: 500px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #0A334D;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 12px;
+    color: #6CC8AC;  
+}
+
+.age_card{
+    width: 260px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #0A334D;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 12px;
+    color: #6CC8AC;
 }
 
 .menu{
@@ -111,27 +158,25 @@
 .second_slaid_main{
     display: flex;
     background-color: #6CC8AC;
-    width: 600px;
+    width: 650px;
     height: 330px;
     position: relative;
-    margin-left: 200px;
+    margin-left: 150px;
     border-radius: 50px;
     margin-top: 42.5px;
+    overflow: hidden;
 }
-
-
 
 
 .second_slaid_main_text{
     padding: auto;
-    display: flex;
-    font-style: none;
+    word-break: break-all;
+    max-width: 600px;
+
     line-height: 130%;
     margin: auto;
 	text-align: center;
 }
-
-
 
 .main_photo{
     width: 475px;
@@ -146,14 +191,14 @@
 
 .blue_block1{
     width: 600px;
-    height: 260px;
+    height: 300px;
     border-radius: 50px;
     background-color: #0A334D;
     position: absolute;
     margin-left: 60px;
     margin-top: 110px;
     background: linear-gradient(#0A334D, #0B3956, #0B3652, #0E4568, #1777B3);
-
+    overflow: hidden;
 }
 
 
@@ -165,19 +210,21 @@
     margin-left: 20px;
     margin-top: 50px;
     margin-bottom: auto;
-text-align: center;
+    text-align: center;
+    word-break: break-all;
+    padding-right: 10px;
 }
 
 .blue_block2{
     width: 600px;
-    height: 260px;
+    height: 300px;
     border-radius: 50px;
     background-color: #0A334D;
     position: absolute;
     margin-left: 780px;
     margin-top: 180px;
     background: linear-gradient(#0A334D, #0B3956, #0B3652, #0E4568, #1777B3);
-
+    overflow: hidden;
 }
 .blue_text2{
     color: white;
@@ -188,6 +235,8 @@ text-align: center;
     margin-top: 50px;
     margin-bottom: auto;
     text-align: center;
+    word-break: break-all;
+    padding-right: 10px;
 }
 
 
@@ -222,18 +271,17 @@ text-align: center;
     height: 435px;
     border-radius: 50px;
     margin-top: 440px;
-    margin-left: -690px;
+    margin-left: -720px;
     position: relative;
     z-index: 1;
 }
 
-/* ДОПИСАТЬ СТИЛЬ */
 .third_photo {
-    width: 500px;
-    height: 450px;
+    width: 520px;
+    height: 435px;
     border-radius: 50px;
     margin-left: 50px;
-    margin-top: -55px;
+    margin-top: 30px;
     display: flex;
     z-index: 1;
 }
@@ -266,7 +314,7 @@ text-align: center;
 .blue_fone_index{
     background-color: #021C28;
     width: 1440px;
-    height: 900px;
+    height: 800px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 35px;
@@ -292,11 +340,15 @@ text-align: center;
     height: 105px;
     background: linear-gradient(#3E8B74, #3C8770, #11251F);
     border-color: #021C28;
-
+    border-style: solid;
     text-align: center;
     line-height: 40px;
     font-size: 45px;
     cursor: pointer;
+}
+
+.menu_elements_index:active{
+    border: #021C28;
 }
 
 .linia_index1{
@@ -361,7 +413,7 @@ input[type="text"]:active{
     border-radius: 50px;
     border-color: #021C28;
     background-color: #0A334D;
-
+    border-style: solid;
     font-size: 50px;
     color: #6CC8AC;
 
@@ -555,8 +607,12 @@ input[type="url"]{
 
     font-size: 50px;
     color: #6CC8AC;
-
+    border-style: solid;
     cursor: pointer;
+}
+
+.submit_create:active{
+    border-color: #6CC8AC;
 }
 
 .link_back{
@@ -564,10 +620,10 @@ input[type="url"]{
     font-size: 50px;
     color: #6CC8AC;
 }
-
+ 
 .back_create{
     position: absolute;
-
+    border-style: solid;
     width: 600px;
     height: 75px;
     margin: auto;
@@ -578,4 +634,123 @@ input[type="url"]{
     background-color: #0A334D;
 
     cursor: pointer;
+}
+
+.back_create:active{
+    border-color: #6CC8AC;
+}   
+
+/* CREATE */
+.blue_fone_del{
+    background-color: #021C28;
+    width: 1440px;
+    height: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 35px;
+    margin: auto;
+    margin-top: -30px;
+}
+
+.but_delete{
+    width: 300px;
+    height: 100px;
+    margin-top: 30px;
+    border-radius: 50px;
+    background-color: #93ACBB;
+    border-style: solid;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.but_delete:active{
+    border-style: solid;
+    border-color: #6CC8AC;
+    
+}
+
+.back_del{
+    border-style: solid;
+    width: 600px;
+    height: 75px;
+    margin-left: 450px;
+    margin-top: 40px;
+    border-radius: 50px;
+    border-color: #021C28;
+    background-color: #0A334D;
+
+    cursor: pointer;
+
+    font-size: 40px;
+    color: #6CC8AC;
+}
+
+.back_del:active{
+    border-color: #6CC8AC;
+}
+
+/* ERROR */
+.blue_fone_error{
+
+    background-color: #021C28;
+    width: 1440px;
+    height: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 35px;
+    margin: auto;
+    margin-top: -30px;
+}
+
+.bl_error{
+    position: absolute;
+
+    border-radius: 50px;
+    width: 500px;
+    height: 130px;
+    margin-left: 470px;
+    margin-top: 70px;
+    padding-top: 20px;
+
+    background: linear-gradient(#3E8B74, #3C8770, #11251F);
+
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.linia_error{
+    position: absolute;
+    border: #6CC8AC;
+    height: 3px;
+    width: 1340px;
+    margin-left: 50px;
+    margin-top: 270px;
+    box-shadow: inset 10px 0px 81px 17px #6CC8AC, 0px 0px 20px 4px #6CC8AC;
+}
+
+.link_error{
+    text-decoration: none;
+    font-size: 50px;
+    color: #6CC8AC;
+}
+
+.back_error{
+    border-style: solid;
+    width: 600px;
+    height: 75px;
+    margin-left: 420px;
+    margin-top: 320px;
+    border-radius: 50px;
+    border-color: #021C28;
+    background-color: #0A334D;
+
+    cursor: pointer;
+
+    font-size: 40px;
+    color: #6CC8AC;
+}
+
+.back_error:active{
+    border-color: #6CC8AC; 
 }
