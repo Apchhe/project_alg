@@ -39,11 +39,12 @@
 <body class="telo">
     <header class="header_name_conteiner">
         <nav>
-            <a href="{{ url_for('create') }}">Создать свою Карточку</a>
-            <a href="{{ url_for('delete') }}">Удалить свою Карточку</a>
-            <a href="{{ url_for('index') }}">Вернуться на главную</a>
+            <a href="{{ url_for('create') }}"><button class="header_elements_card"> Создать свою Карточку </button></a>
+            <a href="{{ url_for('delete') }}"><button class="header_elements_card"> Удалить свою Карточку </button></a>
+            <a href="{{ url_for('index') }}"><button class="header_elements_card"> Вернуться на главную </button></a>
         </nav>
     </header>
+    
 <div class="blue_fone">
     <div class="menu">
         <button class="menu_elements" onclick="window.open('{{ card.link_1 }}');" target="_self"> GitHub </button>
@@ -52,11 +53,17 @@
         <button class="menu_elements" onclick="window.open('{{ card.link_4 }}');" target="_self"> CSS </button>
         </form>
     </div>
+    
     <main>
-        <h1>Карточка {{ card.username }}</h1>
-        <h2>Мой возраст: {{card.age }}</h2>
+        <div class="na_card">
+            <h1 class="name_card">Карточка {{ card.username }}</h1>
+            <h1 class="age_card">Мой возраст: {{card.age }}</h1>
+        </div>
+
+        <div class="linia_index1"></div>
+
         <div class="main_info">
-            <div class="linia_info"></div>
+
             <div class="first_slaid">
                 <div class="oval"></div>
                 <p class="dop_info">  </p>
