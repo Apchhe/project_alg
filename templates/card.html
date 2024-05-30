@@ -1,33 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Карточка {{ card.username }}</title>
-</head>
-<body>
-    <h1>Карточка {{ card.username }}</h1>
-    <p>Возраст: {{ card.age }}</p>
-    <p>Текст 1: {{ card.text_1 }}</p>
-    <p>Текст 2: {{ card.text_2 }}</p>
-    <p>Текст 3: {{ card.text_3 }}</p>
-    {% if card.image_1 %}
-        <img src="data:image/jpeg;base64,{{ card.image_1 }}" alt="Изображение 1"><br>
-    {% endif %}
-    {% if card.image_2 %}
-        <img src="data:image/jpeg;base64,{{ card.image_2 }}" alt="Изображение 2"><br>
-    {% endif %}
-    {% if card.image_3 %}
-        <img src="data:image/jpeg;base64,{{ card.image_3 }}" alt="Изображение 3"><br>
-    {% endif %}
-    <p>Ссылка 1: <a href="{{ card.link_1 }}">{{ card.link_1 }}</a></p>
-    <p>Ссылка 2: <a href="{{ card.link_2 }}">{{ card.link_2 }}</a></p>
-    <p>Ссылка 3: <a href="{{ card.link_3 }}">{{ card.link_3 }}</a></p>
-    <p>Ссылка 4: <a href="{{ card.link_4 }}">{{ card.link_4 }}</a></p>
-    <a href="{{ url_for('index') }}">Вернуться на главную</a>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +41,6 @@
             <div class="second_slaid_main">
                 <p class="second_slaid_main_text"> {{ card.text_1 }} </p>
             </div>
-            <!-- <img class="main_photo" src="main_photo.jpg" alt="Здесь должна быть картника"> -->
             {% if card.image_1 %}
                 <img class="main_photo" src="data:image/jpeg;base64,{{ card.image_1 }}" alt="Изображение 1"><br>
             {% endif %}
@@ -87,7 +56,6 @@
         </div>
         <hr class="linia"></hr>      
         <div class="sec_block_ram_photo">
-            <!-- <img class="sec_photo" src="photo2.png"alt="Здесь должна быть картника"> -->
             {% if card.image_2 %}
                 <img class="sec_photo" src="data:image/jpeg;base64,{{ card.image_2 }}" alt="Изображение 2"><br>
             {% endif %}
