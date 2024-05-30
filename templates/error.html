@@ -5,9 +5,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Ошибка</title>
 </head>
-<body>
-    <h1>Ошибка</h1>
-    <p>{{ get_flashed_messages()[0] }}</p>
-    <a href="{{ url_for('index') }}">Вернуться на главную</a>
+<body class="telo">
+
+    <h1 class="header_name_conteiner"> Ошибка </h1>
+
+    <div class="blue_fone_error">
+
+        <div class="bl_error">
+            {{ get_flashed_messages()[0] }}
+        </div>
+
+        <div class="linia_error"></div>
+
+        <a class="link_error" href="{{ url_for('index') }}"><button class="back_error"> Вернуться на главную </button></a>
+    
+    </div>
 </body>
 </html>
